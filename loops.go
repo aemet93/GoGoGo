@@ -7,13 +7,13 @@ func main() {
 	fruits := []string{"apple", "banana", "orange"}
 
 	log.Println(fruits)
-	log.Println("===================================")
+	log.Println()
 
 	// for loop
 	for index, value := range fruits {
 		log.Printf("Friut %v has index %v", value, index)
 	}
-	log.Println("===================================")
+	log.Println()
 
 	prices := []float64{5.15, 10.8, 3}
 	var total float64
@@ -21,6 +21,7 @@ func main() {
 		total = total + price
 	}
 	log.Print(total)
+	log.Println()
 
 	fruitPrice := map[string]float64{
 		"apple":  5.15,
@@ -28,7 +29,6 @@ func main() {
 		"orange": 3,
 	}
 
-	log.Println("===================================")
 	log.Print("Menu:")
 	for key, price := range fruitPrice {
 		log.Printf("- %v %v uah", key, price)
