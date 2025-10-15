@@ -4,7 +4,7 @@ import (
 	"log"
 )
 
-func main() {
+func vars() {
 	// повторяем переменные (declaration, initialization)
 	var age uint64
 	var ageCategory string

@@ -4,7 +4,7 @@ import (
 	"log"
 )
 
-func main() {
+func maps() {
 	// variables
 	// data types: int, string, bool, list (array)
 	// if statement

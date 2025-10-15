@@ -4,7 +4,7 @@ import (
 	"log"
 )
 
-func main() {
+func shop() {
 	// DRINKS LIST
 	drinks := []string{"Latte", "Capuchino", "Espresso"}
 

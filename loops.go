@@ -3,7 +3,7 @@ package main
 import "log"
 
 // LOOPS (циклы)
-func main() {
+func loops() {
 	fruits := []string{"apple", "banana", "orange"}
 
 	log.Println(fruits)

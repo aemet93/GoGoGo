@@ -4,7 +4,7 @@ import (
 	"log"
 )
 
-func main() {
+func lists() {
 	// разбираем array/list || масив/список
 	var a = 1
 	var b = 5
