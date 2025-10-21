@@ -3,7 +3,7 @@ package students
 import "log"
 
 func GetStudentsInfo() {
-	// students := []string{"Bodya", "Alina", "Sasha", "Taran'ka"}
+	students := []string{"Bodya", "Alina", "Sasha", "Taran'ka"}
 
 	marks := map[string][]float64{
 		"Bodya":    {88, 55, 90, 30},
@@ -22,8 +22,8 @@ func GetStudentsInfo() {
 
 	log.Print("================================")
 
-	allSubjectsPassed := isAllSubjectsPassed(marks["Sasha"])
-	log.Printf("Student passed all subjects: %v", allSubjectsPassed)
+	passedStudentsNumber := countPassedStudents(students, marks)
+	log.Printf("Number of passed students: %v", passedStudentsNumber)
 
 	// if student passed all subjects, print to console "<student name> - красавчик"
 	// if not – print to console "<student name> - еблан"
