@@ -27,6 +27,11 @@ func GetStudentsInfo() {
 
 	log.Print("================================")
 	log.Print(calculateGroupAverage(marks))
-	// if student passed all subjects, print to console "<student name> - красавчик"
-	// if not – print to console "<student name> - еблан"
+
+	isPassed := isAllSubjectsPassed(marks["Taran'ka"])
+	if isPassed {
+		log.Print("красавчик")
+	} else {
+		log.Print("еблан")
+	}
 }
