@@ -1,15 +1,5 @@
 package portfolio
 
-type Coin struct {
-	Name   string
-	Amount float64
-	Price  float64
-}
-
-func (c Coin) TotalInUSD() float64 {
-	return c.Amount * c.Price
-}
-
 type Portfolio struct {
 	Coins map[string]Coin
 }
@@ -22,4 +12,20 @@ func (p Portfolio) GetCoins() map[string]float64 {
 	}
 
 	return coinList
+}
+
+func (p Portfolio) TotalInUSD() float64 {
+	var total float64
+	for _, coin := range p.Coins {
+
+		total += coin.GetTotalUSD()
+	}
+
+	return total
+}
+
+func (p Portfolio) Buy(name string, amount float64) {
+	coin := p.Coins[name]
+	coin.Amount += amount
+	p.Coins[name] = coin
 }
