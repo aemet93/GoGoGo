@@ -17,7 +17,6 @@ func (p Portfolio) GetCoins() map[string]float64 {
 func (p Portfolio) TotalInUSD() float64 {
 	var total float64
 	for _, coin := range p.Coins {
-
 		total += coin.GetTotalUSD()
 	}
 
