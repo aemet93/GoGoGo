@@ -28,3 +28,17 @@ func (p Portfolio) Buy(name string, amount float64) {
 	coin.Amount += amount
 	p.Coins[name] = coin
 }
+
+func (p Portfolio) Sell(name string, amount float64) {
+	coin := p.Coins[name]
+	coin.Amount -= amount
+	p.Coins[name] = coin
+}
+
+func (p Portfolio) CoinCount() int {
+	return len(p.Coins)
+}
+
+func (p Portfolio) Balance(name string) float64 {
+	return p.Coins[name].Amount
+}

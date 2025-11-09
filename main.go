@@ -7,22 +7,30 @@ func main() {
 	//students.PrintOnlyEven(1, 55, 79, 35, 45, 65, 56, 75)
 	//lessons.Practice()
 
-	var Robert lessons.Dog
-	Robert.Name = "Robert"
-	Robert.Color = "brown"
+	//var Robert lessons.Dog
+	//Robert.Name = "Robert"
+	//Robert.Color = "brown"
+	//
+	//Richard := lessons.Dog{
+	//	Name:  "Richard",
+	//	Color: "grey",
+	//}
+	//
+	//Richard.Run()
+	//Robert.Run()
+	//
+	//Richard.SayName()
+	//Robert.SayName()
+	//
+	//Dogs := []lessons.Dog{Robert, Richard}
+	//
+	//SayDogsName(Dogs)
 
-	Richard := lessons.Dog{
-		Name:  "Richard",
-		Color: "grey",
+	portfolio.RunPortfolio()
+}
+
+func SayDogsName(dogs []lessons.Dog) {
+	for _, dog := range dogs {
+		dog.SayName()
 	}
-
-	Richard.Run()
-	Robert.Run()
-
-	Richard.SayName()
-	Robert.SayName()
-
-	Dogs := []lessons.Dog{Robert, Richard}
-
-	SayDogsName(Dogs)
 }
