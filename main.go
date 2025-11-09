@@ -26,3 +26,9 @@ func main() {
 
 	SayDogsName(Dogs)
 }
+
+func SayDogsName(dogs []lessons.Dog) {
+	for _, dog := range dogs {
+		dog.SayName()
+	}
+}
