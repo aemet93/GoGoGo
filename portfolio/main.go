@@ -1,24 +1,41 @@
 package portfolio
 
-func main() {
+import "log"
+
+func RunPortfolio() {
 	var portfolio Portfolio
-	_ = portfolio
 
 	var coins map[string]Coin
 	coins = map[string]Coin{
 		"ETH": Coin{
-			Name:   "Ethereum",
-			Amount: 0,
-			Price:  4120,
+			Name:  "Ethereum",
+			Price: 4120,
 		},
 		"BTC": Coin{
-			Name:   "Bitcoin",
-			Amount: 0,
-			Price:  115200,
+			Name:  "Bitcoin",
+			Price: 115200,
 		},
 	}
 
 	portfolio = Portfolio{
 		Coins: coins,
 	}
+
+	log.Printf("Total coins %v", portfolio.CoinCount())
+
+	portfolio.Buy("ETH", 2)
+
+	portfolio.Buy("BTC", 10)
+
+	log.Printf("Total value %v USD", portfolio.TotalInUSD())
+
+	portfolio.Sell("BTC", 10)
+
+	portfolio.Sell("ETH", 0.75)
+
+	log.Printf("Total value %v USD", portfolio.TotalInUSD())
+
+	log.Printf("ETH balance %v", portfolio.Balance("ETH"))
+
+	log.Printf("BTC balance %v", portfolio.Balance("BTC"))
 }
